@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<title>Scholar Orbit - Academic Growth Monitor (DSA Version)</title>
+
+<link rel="stylesheet" href="style.css">
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<div id="loginPage">
+
+<div class="login-card">
+
+<h2>Scholar Orbit</h2>
+
+<input id="email" placeholder="Email">
+<input id="password" type="password" placeholder="Password">
+
+<button onclick="login()">Login</button>
+
+</div>
+
+</div>
+
+
+<div id="dashboardPage">
+
+<div class="sidebar">
+
+<h2>Scholar Orbit</h2>
+
+<ul>
+
+<li class="active" onclick="showSection(event,'dashboard')">Dashboard</li>
+<li onclick="showSection(event,'subjects')">Subjects</li>
+<li onclick="showSection(event,'progress')">Progress</li>
+<li onclick="showSection(event,'reports')">Reports</li>
+<li onclick="logout()">Logout</li>
+
+</ul>
+
+</div>
+
+
+<div class="main">
+
+<header>
+
+<h1>Academic Dashboard</h1>
+<button onclick="toggleTheme()">🌙 Mode</button>
+
+</header>
+
+
+<div id="dashboard" class="section">
+
+<div class="cards">
+
+<div class="card clickable">
+<h3>Assignments</h3>
+<p class="counter" data-target="18">0</p>
+</div>
+
+<div class="card clickable">
+<h3>Attendance</h3>
+<p class="counter" data-target="83">0</p>%
+</div>
+
+<div class="card clickable">
+<h3>Average Score</h3>
+<p class="counter" data-target="77">0</p>%
+</div>
+
+</div>
+
+
+<div class="charts">
+
+<div class="chart-box">
+<canvas id="donut"></canvas>
+</div>
+
+<div class="chart-box">
+<canvas id="line"></canvas>
+</div>
+
+</div>
+
+</div>
+
+
+<div id="subjects" class="section" style="display:none">
+
+<div class="card">
+
+<h3>Subjects</h3>
+
+<p>Data Structures</p>
+<p>Mathematics</p>
+<p>Operating Systems</p>
+<p>Java Programming</p>
+
+</div>
+
+</div>
+
+
+<div id="progress" class="section" style="display:none">
+
+<div class="card">
+
+<h3>Progress Overview</h3>
+
+<p>Semester Completion: 72%</p>
+<p>Assignments Submitted: 18</p>
+<p>Attendance: 83%</p>
+
+</div>
+
+</div>
+
+
+<div id="reports" class="section" style="display:none">
+
+<div class="card">
+
+<h3>Reports</h3>
+
+<p>Mid Exam Report</p>
+<p>Attendance Report</p>
+<p>Performance Analysis</p>
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
